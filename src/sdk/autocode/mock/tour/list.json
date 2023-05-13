@@ -1,0 +1,156 @@
+[
+    {
+        "batches": [
+            "recJN3hIjSxPoJVTm",
+            "recAKIbIInIfLqwwg",
+            "rectpVWB0w8z0UWTV",
+            "recA7dg3YBhp79URD"
+        ],
+        "event": [
+            "rece6dkSNChGj6dRW"
+        ],
+        "trips": [
+            "reczMB7qeW51sZvAx",
+            "recIN9FATItB6Mphz"
+        ],
+        "title": "Samsara",
+        "destination": [
+            "recg0b6l0SzogowHi"
+        ],
+        "destination_coordinate": [
+            "-9.8328282, -35.9272737"
+        ],
+        "destination_place_id": [
+            "ChIJ_4BNCacBBAcRLPVhb8sEoI0"
+        ],
+        "capacity": 100,
+        "datetime": [
+            "2023-04-30T01:00:00.000Z"
+        ],
+        "avaiability": 48,
+        "subtitle": "Leave Experience",
+        "paths": [
+            "reczoAD7nKjPA5oYU",
+            "recLzJWfkoE0eYLNC",
+            "recKKvAtRteAASIAG",
+            "rec53t1PNTnKgGyqX",
+            "reciTDD0uctHMGuEU",
+            "recfm96tgSXLvHwGq",
+            "reczMMx6BpTlyjHgu",
+            "recXULysLSPXBh0oI"
+        ],
+        "record_id": "recta6jPylhCI9Onq",
+        "heading": "Samsara Leave Experience (29/04/2023)",
+        "occupancy": 52,
+        "revenue": 3030,
+        "average_price": 58.27,
+        "thumbnail": [
+            {
+                "id": "attz1YOeNjLU7BJEI",
+                "width": 828,
+                "height": 745,
+                "url": "https://v5.airtableusercontent.com/v1/16/16/1683698400000/X8Ao0WH_dLAJ8xCYgOr3Uw/yXL6AakAydKcOGV8qBJh_aX-AxODAKy9xqqjkQxjzNNh1A9_0I-QZ2FrSXLAeVabq-WpwUoJJHrXMo7jAAtZGBx0LSYdiGGKxgJbrOcaP2w/izdNzAOAG2s66WDgd-wARU4IPtyZ4M0fMG6RsEVo2Tg",
+                "filename": "Samsara.jpeg",
+                "size": 122992,
+                "type": "image/jpeg",
+                "thumbnails": {
+                    "small": {
+                        "url": "https://v5.airtableusercontent.com/v1/16/16/1683698400000/6rPWUGJwXKe1NPCM6iPs_A/5s_rKA48bTA3oBeT-2HOzUupX95CkEmmbyozY40-wColieE9cTU2Q8WxT-nG6N4O0JQy8wLRkXR3r6kOHfRxNQ/iDMa99x8pWvtq5GEvoHjZmTsA6EqmukJOCJRHcw4jpU",
+                        "width": 40,
+                        "height": 36
+                    },
+                    "large": {
+                        "url": "https://v5.airtableusercontent.com/v1/16/16/1683698400000/Yp2gUCjRSMnbEPvn_zKELg/kssKQcfF61-Tf_Za7nVsdPECyxYFN5nen_CGxsVLdP4EyuyBj-GWlku8XC_ULWt8eBHlWNJow9X7s-ryWo6tnw/VsGnjK4uI3I6FZQtAuVnMECOPdev4NLEs6j7FfJTCQU",
+                        "width": 569,
+                        "height": 512
+                    },
+                    "full": {
+                        "url": "https://v5.airtableusercontent.com/v1/16/16/1683698400000/kIO_uY2T5oVYqMrAn9AXFA/OSiKq_W6uLumLeUpKIeJlGuC0roX0OilqBu-f3AStaLKwlvVcBDa562cLeHgRmUrtA0ac4V-jUSwYlmstAQ2eA/Nxru5TxL_CWVeB0KbQbLu63TMtCMWaEcGKtLm5Z15WM",
+                        "width": 3000,
+                        "height": 3000
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "batches": [
+            "recuHAFkQosfBCPUG"
+        ],
+        "event": [
+            "recGuZZ5oTnVpcJfj"
+        ],
+        "title": "Samsara!",
+        "destination": [
+            "recg0b6l0SzogowHi"
+        ],
+        "destination_coordinate": [
+            "-9.8328282, -35.9272737"
+        ],
+        "destination_place_id": [
+            "ChIJ_4BNCacBBAcRLPVhb8sEoI0"
+        ],
+        "capacity": 0,
+        "datetime": [
+            "2023-04-30T01:00:00.000Z"
+        ],
+        "avaiability": 0,
+        "subtitle": "Leave experience",
+        "record_id": "recZzOZLJGwj7XWQn",
+        "heading": "Samsara! Leave experience (29/04/2023)",
+        "occupancy": 0,
+        "revenue": 0,
+        "average_price": 0,
+        "thumbnail": [
+            {
+                "id": "att21kz7VHMK1oCzO",
+                "width": 1400,
+                "height": 700,
+                "url": "https://v5.airtableusercontent.com/v1/16/16/1683698400000/UaV6HBzCf0wDDshXpVgqzg/8MwYrb6RVTFzSrpgEpxiPaxvW03WkZqSDyFzgFLxrsNibT3AeFxSVwPGR8A5z9jpmtjU7db_Ac_Spmlz225Uvjs6k5VMCihG_lEAhXPMy1Jq6uDBv5H1gsSQzVMoDbhR/9lgsTXG1X-f1GSZYNIAN7vYtY41w_B80uJaE8StZn1Y",
+                "filename": "samsara-leave-1677596067.jpg",
+                "size": 56689,
+                "type": "image/jpeg",
+                "thumbnails": {
+                    "small": {
+                        "url": "https://v5.airtableusercontent.com/v1/16/16/1683698400000/UhHoezMyeJQHVcJ2N_Fgtg/8ZKorajHwAtX6AyeGk0CMyuhKqAJfCSa3YwJ99wvLJbMl2pxPdo42-iRyDg02BAZvUJqXqdIy7THma0JV_NKUg/AdA_EiXlEILd8qq3puDjjOIKN9Zf2uEwAyfp301PaA8",
+                        "width": 72,
+                        "height": 36
+                    },
+                    "large": {
+                        "url": "https://v5.airtableusercontent.com/v1/16/16/1683698400000/Er07ndkq5v5LTbQma21_XQ/qCZoi9dpzNXP6f3p6yED6l7fU2Yn73_6rRtwlbAZS_bfmU14yuORqdQwE8sthh_97_90DwkMipBIvB1khIGgTQ/W1zrC3kNEgEKQwGG7CYJXvP7TBDO2_tXbmpsfKl9Oqs",
+                        "width": 1024,
+                        "height": 512
+                    },
+                    "full": {
+                        "url": "https://v5.airtableusercontent.com/v1/16/16/1683698400000/Hh8vhRQo6h78fqSnl49EAQ/s1KIK0EdRsy6nQSVu4Owe6XBv_9wz4Gte1qdXV_AXFjdInPfmjznrYoXXuIirvZIv6C-wC0ENktpHyixqVGSZg/z92vCK-OvzM7lEHFJth3MFzU2XAunXBtS_PKgAJayy0",
+                        "width": 3000,
+                        "height": 3000
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "event": [
+            "recOCE1YKVpWTwUmv"
+        ],
+        "title": "Drop",
+        "destination_coordinate": [
+            null
+        ],
+        "destination_place_id": [
+            null
+        ],
+        "capacity": 0,
+        "datetime": [
+            "2023-05-07T01:00:00.000Z"
+        ],
+        "avaiability": 0,
+        "subtitle": "Open Air",
+        "record_id": "recYbMZLVt7M4F00a",
+        "heading": "Drop Open Air (06/05/2023)",
+        "occupancy": 0,
+        "revenue": 0,
+        "average_price": 0
+    }
+]

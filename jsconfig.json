@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@components": [
+        "./src/components"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@sdk": [
+        "./src/sdk"
+      ],
+      "@sdk/*": [
+        "./src/sdk/*"
+      ],
+    }
+  }
+}

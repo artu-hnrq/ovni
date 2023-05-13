@@ -1,0 +1,74 @@
+{
+    "batches": [
+        "recJN3hIjSxPoJVTm",
+        "recAKIbIInIfLqwwg",
+        "rectpVWB0w8z0UWTV",
+        "recA7dg3YBhp79URD"
+    ],
+    "event": [
+        "rece6dkSNChGj6dRW"
+    ],
+    "trips": [
+        "reczMB7qeW51sZvAx",
+        "recIN9FATItB6Mphz"
+    ],
+    "title": "Samsara",
+    "destination": [
+        "recg0b6l0SzogowHi"
+    ],
+    "destination_coordinate": [
+        "-9.8328282, -35.9272737"
+    ],
+    "destination_place_id": [
+        "ChIJ_4BNCacBBAcRLPVhb8sEoI0"
+    ],
+    "capacity": 100,
+    "datetime": [
+        "2023-04-30T01:00:00.000Z"
+    ],
+    "avaiability": 48,
+    "subtitle": "Leave Experience",
+    "paths": [
+        "reczoAD7nKjPA5oYU",
+        "recLzJWfkoE0eYLNC",
+        "recKKvAtRteAASIAG",
+        "rec53t1PNTnKgGyqX",
+        "reciTDD0uctHMGuEU",
+        "recfm96tgSXLvHwGq",
+        "reczMMx6BpTlyjHgu",
+        "recXULysLSPXBh0oI"
+    ],
+    "record_id": "recta6jPylhCI9Onq",
+    "heading": "Samsara Leave Experience (29/04/2023)",
+    "occupancy": 52,
+    "revenue": 3030,
+    "average_price": 58.27,
+    "thumbnail": [
+        {
+            "id": "attz1YOeNjLU7BJEI",
+            "width": 828,
+            "height": 745,
+            "url": "https://cdn.uptickets.com.br/events/images/samsara-leave-1677596067.jpg",
+            "filename": "Samsara.jpeg",
+            "size": 122992,
+            "type": "image/jpeg",
+            "thumbnails": {
+                "small": {
+                    "url": "https://v5.airtableusercontent.com/v1/16/16/1683396000000/nVHngVCBijsdawDoUAg8Lw/XfS79-RRGgdy9qu_Th80U9TktOCH0COkguGGrGeRdEUpYQ4G8vIKAm0RzSzbn-PMzlcEKkAEoaSUD_cBj6ku5g/YnESzDYM8n_0U0wXdnqbOBeGghoi34-MPiOM6aWiJtE",
+                    "width": 40,
+                    "height": 36
+                },
+                "large": {
+                    "url": "https://v5.airtableusercontent.com/v1/16/16/1683396000000/Mar5CUv_rwPIzGZRWLghTA/wulgYprzwDHMiT4fODOMyEHITEzd2nnb81eVh48EBTZfXTc2RgDUri-N3UFT7FhQNhFNIYTDh2UTE89nT-3p9g/S76cyZgiu8Zx9rej19fanTMeiDF1bIj2ZMW3uK4aLyY",
+                    "width": 569,
+                    "height": 512
+                },
+                "full": {
+                    "url": "https://v5.airtableusercontent.com/v1/16/16/1683396000000/ja3cid9IFqyfgZeygL5J2w/GRo5ChFW5kgZ9syhy2hGwx_rYNe7WJmf422Ncd1J_InhrHBXBVidffSo0qSsUZMGsCGHmcTmnJMgQ6LBKWnoWg/AmR4Ije8CJM_hd3iqwJx3xuqMNTwCd9cI6975NNJHuA",
+                    "width": 3000,
+                    "height": 3000
+                }
+            }
+        }
+    ]
+}

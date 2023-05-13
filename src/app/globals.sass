@@ -1,0 +1,60 @@
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+$options: ('start': 's', 'center': 'c', 'end': 'e', 'stretch': 'ss')
+
+@mixin layout
+  @each $x-option, $x-abr in $options
+    @each $y-option, $y-abr in $options
+
+      .row-#{$x-option}-#{$y-option}, .row-#{$x-abr}-#{$y-abr}
+        @extend .row
+        @apply justify-#{$x-option} items-#{$y-option}
+
+      .col-#{$x-option}-#{$y-option}, .col-#{$x-abr}-#{$y-abr}
+        @extend .col
+        @apply flex-col items-#{$x-option} justify-#{$y-option}
+
+@layer components
+  @include layout
+
+  .row
+    @apply flex
+    @apply flex-row
+
+  .col
+    @apply flex
+    @apply flex-col
+
+  //
+
+  .text
+    @apply leading-none tracking-tight
+
+  .text-primary
+    @extend .text
+    @apply  text-gray-800 dark:text-white
+    @apply font-extrabold
+
+  .text-secondary
+    @extend .text
+    @apply text-gray-500 dark:text-gray-300
+    @apply font-bold
+
+:root
+  --foreground-rgb: 0, 0, 0
+  --background-start-rgb: 255, 255, 255
+  --background-end-rgb: 220, 220, 220
+
+@media (prefers-color-scheme: dark)
+  :root
+    --foreground-rgb: 255, 255, 255
+    --background-start-rgb: 0, 0, 0
+    --background-end-rgb: 0, 0, 0
+
+body
+  color: rgb(var(--foreground-rgb))
+  // background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb))
+  background-color: #0093E9
+  background-image: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%)
