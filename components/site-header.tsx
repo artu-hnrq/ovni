@@ -9,10 +9,10 @@ import { Bar } from "./core/bar"
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
+    <header className="sticky top-0 z-40 w-full border-b bg-background hover:bg-lime-500 dark:bg-purple-500">
       <Bar from="lime" via="emerald" to="cyan" />
       <div className="container flex h-14 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <MainNav items={siteConfig.mainNav} />
+        <MainNav items={[]} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
             <Link

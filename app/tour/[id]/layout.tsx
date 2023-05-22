@@ -1,10 +1,9 @@
-import sdk from "@/lib/sdk"
-// import { Tour } from "@/lib/sdk/tour"
-import * as Tour from "../../../components/tour/tour"
+import { NavMenu, Thumbnail, InfoPanel, Header } from "@/components/tour"
 import { Card } from "@/components/ui/card"
-import { NavMenu } from "@/components/tour"
 
 import { cn } from "@/lib/utils"
+import sdk from "@/lib/sdk"
+
 
 
 interface TourDetailLayoutProps {
@@ -13,25 +12,21 @@ interface TourDetailLayoutProps {
 }
 
 export default async function TourDetail({ children, params }: TourDetailLayoutProps) {
-    let tour = await sdk.Tour.find(params.id)
+    let tour = await sdk.Tour.retrieve(params.id)
 
     return (
-        <section className="container flex flex-col md:flex-row items-start gap-4 pb-8 md:py-12">
-            <div className={cn(
-                "col-center-start w-full",
-                "md:w-1/3"
+        <section className="container flex flex-col items-center gap-4 py-4 md:py-12">
+            <Header tour={tour} className="px-16" />
+
+            <Card className={cn(
+                "w-full max-w-screen-xl",
+                "overflow-hidden"
             )}>
-                <Tour.Header tour={tour} />
-            </div>
-            <div className="col-start-start w-full gap-4">
-                {/* <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10"> */}
-                <Card className="flex-1 flex flex-col items-center w-full h-full max-w-screen-lg overflow-hidden">
-                    <NavMenu tour={tour} />
-                    {children}
-                </Card>
-                {/* </section> */}
-            </div>
+                <NavMenu tour={tour} />
+                {children}
+            </Card>
         </section>
     )
 }
+
 

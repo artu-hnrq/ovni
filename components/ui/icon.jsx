@@ -1,10 +1,21 @@
 'use client'
 
-import { default as icons } from 'lucide-react';
+import * as icons from 'lucide-react';
+import React from 'react';
 
-
-export default function Icon({ className, icon, ...props }) {
-    return (
-        <Icon className={className} {...props} />
-    )
+export interface IconProps {
+    className?: string,
+    icon: keyof typeof icons,
+    size?: number,
 }
+
+
+export default function Icon({ icon, ...props }: IconProps) {
+    if (icons[icon]) {
+        return <icons[icon] {...props } />
+    }
+    else {
+        return <></>
+    }
+}
+

@@ -17,6 +17,12 @@ const nextConfig = {
         hostname: 'v5.airtableusercontent.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ulbncvzbvvhuaaqlyjwr.supabase.co',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

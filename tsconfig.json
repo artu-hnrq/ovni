@@ -35,7 +35,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/ui/icon.jsx"
+    "components/ui/icon.jsx",
+    "components/tour/index.js"
   ],
   "exclude": [
     "node_modules"

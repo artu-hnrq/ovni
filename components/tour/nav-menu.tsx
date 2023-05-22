@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
 
-import Tour from "@/lib/sdk/tour"
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -23,14 +22,16 @@ import {
 } from "@/components/ui/tooltip"
 
 
+import { Ovni } from "@/lib/sdk"
 import * as icons from 'lucide-react';
-
 
 import { cn } from "@/lib/utils"
 
+
+
 interface NavMenuProps {
     children?: React.ReactNode,
-    tour: Tour,
+    tour: Ovni.Tour,
 }
 
 export default function NavMenu({ children, tour }: NavMenuProps) {
@@ -56,7 +57,7 @@ export default function NavMenu({ children, tour }: NavMenuProps) {
     ].map((props) => ({
         ...props,
         active: pathname === props.href,
-        icon: <props.icon size={14} />
+        icon: <props.icon size={18} />
     }))
 
     return (

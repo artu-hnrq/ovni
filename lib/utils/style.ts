@@ -13,3 +13,16 @@ export function dark(...inputs: string[]) {
       .join(" ")
   ))
 }
+
+export function create_apply_modifier_function(modifier: string) {
+  return function apply_modifier(...inputs: string[]) {
+    return cn(inputs.map((input) =>
+      input
+        .split(" ")
+        .map((className) => `${modifier}:${className}`)
+        .join(" ")
+    ))
+  }
+}
+
+export const md = create_apply_modifier_function("md")
