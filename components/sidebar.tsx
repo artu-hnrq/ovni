@@ -3,9 +3,9 @@ import Link from "next/link"
 import { NavItemProps } from "@/types/nav"
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
+import Logo from "./core/logo"
 
 
 export function Sidebar() {
@@ -18,11 +18,7 @@ export function Sidebar() {
         "flex flex-col items-center gap-6 md:gap-10",
         "h-full py-4 px-2", "sm:justify-between sm:space-y-0"
       )}>
-
-        <Link href="/" className="flex justify-center space-x-2">
-          <Icons.logo className="h-6 w-6" />
-        </Link>
-
+        <Logo className="" />
         <Nav items={siteConfig.iconNav} />
         <ThemeToggle />
       </div>
