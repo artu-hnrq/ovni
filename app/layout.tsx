@@ -37,9 +37,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen font-sans antialiased", fontSans.variable,
-            "bg-gradient-to-b from-gray-300 via-slate-300 to-zinc-300",
-            "dark:from-gray-700 dark:via-slate-700 dark:to-zinc-700",
+            "font-sans antialiased", fontSans.variable,
+            "min-h-screen",
+            "bg-gray-200 dark:bg-gray-700",
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
@@ -50,8 +50,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
 
             <Sidebar />
 
-            <main className="relative flex flex-col items-center min-h-screen">
-              <div className="flex flex-col items-center w-full max-w-screen-2xl min-h-screen">
+            <main className="relative flex flex-col items-center">
+              <div className="
+                flex flex-col items-start
+                w-full max-w-screen-2xl min-h-screen
+                p-8
+              ">
                 {children}
               </div>
             </main>
