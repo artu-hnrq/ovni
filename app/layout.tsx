@@ -37,20 +37,29 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
+            "min-h-screen font-sans antialiased", fontSans.variable,
+            "bg-gradient-to-b from-gray-300 via-slate-300 to-zinc-300",
+            "dark:from-gray-700 dark:via-slate-700 dark:to-zinc-700",
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <div className="
+              sticky top-0 z-40 h-1.5 w-full
+              bg-gradient-to-r from-lime-500 via-emerald-500-500 to-cyan-500
+            "/>
+
             <Sidebar />
+
             <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
+              <div className="flex-1">
+                {children}
+              </div>
             </div>
+
             <TailwindIndicator />
           </ThemeProvider>
         </body>
-      </html>
+      </html >
     </>
   )
 }
