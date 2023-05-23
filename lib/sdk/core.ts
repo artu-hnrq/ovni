@@ -1,5 +1,5 @@
 const lib = require('lib')({ token: process.env.STDLIB_SECRET_TOKEN });
-
+const BASE_ID = 'app2raT2vCYQJoYq0'
 
 export type RecordId = string
 
@@ -20,7 +20,7 @@ export class AirtableSDK<T extends Table> {
 
     async retrieve(id: RecordId): Promise<T> {
         let record: Record<T> = await lib.airtable.query['@1.0.0'].records.retrieve({
-            // baseId: BASE_ID,
+            baseId: BASE_ID,
             table: this.table,
             id: id,
         });

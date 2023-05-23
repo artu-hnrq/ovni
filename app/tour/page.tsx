@@ -1,8 +1,6 @@
-import Link from "next/link"
-import Tour from "@/components/core/tour"
 
+import Tour from "@/components/core/tour"
 import sdk from "@/lib/sdk"
-import { cn } from "@/lib/utils"
 
 
 export default async function TourListPage() {
@@ -14,22 +12,33 @@ export default async function TourListPage() {
       flex flex-col items-start gap-8
       max-w-screen-md h-full p-8
     ">
-      <h1 className="
-        text-xl font-extrabold leading-tight tracking-tighter
-        sm:text-2xl md:text-3xl lg:text-4xl
+      <div className="container">
+        <h1 className="
+        font-extrabold leading-tight tracking-tighter
+        text-muted-700 dark:text-muted-200
+        text-xl sm:text-2xl md:text-3xl lg:text-4xl
       ">
-        {/* TODO: Implement object orienting */}
-        Excursões
-      </h1>
+          {/* TODO: Implement object orienting */}
+          Excursões
+        </h1>
+      </div>
 
-      {tours.map((tour) => (
-        <Tour.Thumbnail tour={tour} className={cn(
-          "rounded-xl border-2 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]",
-          "hover:scale-110 hover:shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] hover:border-lime-400",
-          "transition-all duration-150 delay-75 ease-in-out",
-        )} />
-      ))}
+      <div className="flex flex-wrap gap-4 justify-center w-full">
+        {tours.map((tour) => (
+          <Tour.Card
+            tour={tour}
+            className="
+              rounded-xl border-2 border-transparent
+              transition-all duration-150 delay-75 ease-in-out
+              hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-600
+            " />
+        ))}
+      </div>
 
-    </div>
+    </div >
   )
 }
+
+
+
+
