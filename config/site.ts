@@ -1,4 +1,4 @@
-import * as icons from 'lucide-react'
+import { Icons } from '@/components/icons'
 
 export type SiteConfig = typeof siteConfig
 
@@ -14,16 +14,14 @@ export const siteConfig = {
   ],
   iconNav: [
     {
-      title: "Twitter",
-      href: "https://twitter.com/artu-hnrq",
-      icon: icons.Twitter,
-      external: true,
+      title: "Excursões",
+      href: "/tour",
+      icon: Icons.Tour,
     },
     {
-      title: "GitHub",
-      href: "https://github.com/artu-hnrq",
-      icon: icons.Github,
-      external: true,
+      title: "Clientes",
+      href: "/customer",
+      icon: Icons.Customer,
     },
 
   ],

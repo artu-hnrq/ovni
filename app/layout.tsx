@@ -45,16 +45,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="
               sticky top-0 z-40 h-1.5 w-full
-              bg-gradient-to-r from-lime-500 via-emerald-500-500 to-cyan-500
+              bg-gradient-to-r from-lime-500 via-emerald-500 to-cyan-500
             "/>
 
             <Sidebar />
 
-            <div className="relative flex min-h-screen flex-col">
-              <div className="flex-1">
+            <main className="relative flex flex-col items-center min-h-screen">
+              <div className="flex flex-col items-center w-full max-w-screen-2xl min-h-screen">
                 {children}
               </div>
-            </div>
+            </main>
 
             <TailwindIndicator />
           </ThemeProvider>
