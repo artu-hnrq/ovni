@@ -12,7 +12,7 @@ export function Sidebar() {
   return (
     <header className={cn(
       "fixed top-0 left-0 z-50 w-fit h-full",
-      "border-r bg-background",
+      "border-r bg-background border-gray-300 dark:border-gray-600",
     )}>
       <div className={cn(
         "flex flex-col items-center gap-6 md:gap-10",

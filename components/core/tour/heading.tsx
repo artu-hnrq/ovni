@@ -15,7 +15,7 @@ export default function Heading({ tour }: { tour: Ovni.Tour }) {
             <CardTitle className="font-bold leading-tight tracking-tighter text-2xl">
                 {tour.title} <CardSubtitle className="text-xl">{tour.subtitle}</CardSubtitle>
             </CardTitle>
-            <CardDescription className='mt-[-2rem] font-extrabold text-muted-500 leading-tight tracking-tighter'>
+            <CardDescription className='mt-0 font-extrabold text-muted-foreground leading-tight tracking-tighter'>
                 {format_datetime(tour.datetime[0])}
             </CardDescription>
         </>

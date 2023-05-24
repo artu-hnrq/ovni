@@ -1,4 +1,4 @@
-import { Table, RecordId } from './__main__'
+import { Table as Airtable, RecordId } from './__main__'
 
 type place_id = string
 type coordinate = string
@@ -9,11 +9,11 @@ type image = {
 
 declare namespace Ovni {
 
-    interface OVNITable extends Table {
+    interface Table extends Airtable {
         record_id: RecordId,
     }
 
-    export interface Event extends OVNITable {
+    export interface Event extends Table {
         __table__: 'Event',
 
         title: string,
@@ -28,7 +28,7 @@ declare namespace Ovni {
         tour: RecordId,
     }
 
-    export interface Tour extends OVNITable {
+    export interface Tour extends Table {
         __table__: 'Tour',
 
         event: RecordId
@@ -54,7 +54,7 @@ declare namespace Ovni {
 
     }
 
-    export interface Trip extends OVNITable {
+    export interface Trip extends Table {
         __table__: 'Trip',
 
         tour: RecordId,
@@ -84,7 +84,7 @@ declare namespace Ovni {
 
     export type WaypointType = "Embarque" | "Parada" | "Destino"
 
-    export interface Waypoint extends OVNITable {
+    export interface Waypoint extends Table {
         __table__: 'Waypoint',
 
         tour: RecordId,
@@ -108,7 +108,7 @@ declare namespace Ovni {
         passenger_count: number,
     }
 
-    export interface Place extends OVNITable {
+    export interface Place extends Table {
         __table__: 'Place',
 
         title: string,
@@ -136,7 +136,7 @@ declare namespace Ovni {
     }
 
 
-    export interface Batch extends OVNITable {
+    export interface Batch extends Table {
         __table__: 'Batch',
 
         title: string,
@@ -162,7 +162,7 @@ declare namespace Ovni {
 
     export type OrderStatus = "Aprovado" | "Pendente" | "Recusado"
 
-    export interface Order extends OVNITable {
+    export interface Order extends Table {
         __table__: 'Order',
 
         id: number,
