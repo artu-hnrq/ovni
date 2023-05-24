@@ -3,9 +3,8 @@ import { cn } from "@/lib/utils"
 import sdk from "@/lib/sdk"
 import Tour from "@/components/core/tour"
 import { TourConfig } from "@/config/tour"
-import { AttributeBadgeProps } from "@/components/core/tour/attribute-badge"
-import { Separator } from "@/components/ui/separator"
-
+import { Card } from "@/components/ui/card"
+import GoBackButton from "@/components/core/go-back-button"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -15,14 +14,18 @@ interface LayoutProps {
 export default async function TourLayout({ children, params }: LayoutProps) {
   let tour = await sdk.Tour.retrieve(params.id)
 
-  let attribute_badges = TourConfig.getAttributeBadgesProps(tour) as AttributeBadgeProps[]
+  let attribute_badges = TourConfig.getAttributeBadgesProps(tour)
 
   return (
-    <div className="flex-1 flex gap-6 w-full py-4">
-      <div className="flex flex-col gap-4 w-1/3 h-full">
+
+    <div className="flex-1 flex gap-12 w-full py-4">
+
+      <GoBackButton href="/tour" />
+
+      <div className="flex flex-col gap-4 w-1/3 h-full sticky top-12">
 
         <Tour.Thumbnail tour={tour} className={cn(
-          "rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]",
+          "rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]",
         )} />
 
         <div className="flex flex-col gap-6 px-2">
@@ -50,18 +53,16 @@ export default async function TourLayout({ children, params }: LayoutProps) {
 
       </div>
 
-
-      <div className="flex flex-col justify-centers py-16 w-min ">
-        <Separator orientation="vertical" className="bg-slate-300 dark:bg-slate-600 w-[0.5px]" />
-      </div>
-
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-2 w-full">
         <div className="flex w-fit">
           <Tour.NavMenu tour={tour} />
         </div>
-        {children}
+
+        <Card className="flex-1 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded">
+          {children}
+        </Card>
       </div>
-    </div>
+    </div >
   )
 }
 

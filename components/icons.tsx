@@ -1,4 +1,5 @@
 import {
+  ArrowLeft,
   Compass,
   Github,
   LucideProps,
@@ -17,6 +18,8 @@ export const Icons = {
   Customer: User,
 
   Create: Plus,
+
+  Back: ArrowLeft,
 
   Sun: SunMedium,
   Moon: Moon,

@@ -23,7 +23,6 @@ export const siteConfig = {
       href: "/customer",
       icon: Icons.Customer,
     },
-
   ],
   links: {
     twitter: "https://twitter.com/shadcn",
