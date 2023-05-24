@@ -1,11 +1,12 @@
 import {
+  Compass,
+  Github,
   LucideProps,
   Moon,
+  Plus,
   SunMedium,
   Twitter,
   type Icon as LucideIcon,
-  Github,
-  Compass,
   User,
 } from "lucide-react"
 
@@ -15,8 +16,11 @@ export const Icons = {
   Tour: Compass,
   Customer: User,
 
+  Create: Plus,
+
   Sun: SunMedium,
   Moon: Moon,
+
   Twitter: Twitter,
   GitHub: Github,
 }

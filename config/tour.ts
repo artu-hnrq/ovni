@@ -17,13 +17,13 @@ export const TourConfig = {
     getAttributeBadgesProps: function (tour: Ovni.Tour) {
         return [
             {
-                icon: "Revenue",
                 label: "Receita",
+                icon: Tour.Icons.Revenue,
                 value: `R$${tour.revenue}`,
             },
             {
-                icon: "AveragePrice",
                 label: "Preço médio",
+                icon: Tour.Icons.AveragePrice,
                 value: `R$${tour.average_price}`,
             },
         ]
@@ -36,21 +36,22 @@ export const TourConfig = {
         return [
             {
                 label: 'Dashboard',
-                href: `/tour/${tour.record_id}`,
-                icon: Tour.Icons.Dashboard
+                icon: Tour.Icons.Dashboard,
+                href: `/`,
             },
             {
                 label: 'Viagens',
-                href: `/tour/${tour.record_id}/trips`,
-                icon: Tour.Icons.Trips
+                icon: Tour.Icons.Trips,
+                href: `/trips`,
             },
             {
                 label: 'Vendas',
-                href: `/tour/${tour.record_id}/sales`,
-                icon: Tour.Icons.Sales
+                icon: Tour.Icons.Sales,
+                href: `/sales`,
             },
         ].map((props) => ({
             ...props,
+            href: `/tour/${tour.record_id}` + props.href,
             active: pathname === props.href,
         }))
     }

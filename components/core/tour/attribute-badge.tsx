@@ -1,13 +1,14 @@
 import Tour from "@/components/core/tour";
+import { LucideIcon } from "lucide-react";
 
 
 export interface AttributeBadgeProps {
-    icon: keyof typeof Tour.Icons;
+    icon: LucideIcon;
     label?: string;
     value: string;
 }
 export default function AttributeBadge({ icon, label, value }: AttributeBadgeProps) {
-    const Icon = Tour.Icons[icon];
+    const Icon = icon;
 
     return (
         <div className="
