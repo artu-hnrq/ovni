@@ -11,3 +11,12 @@ export interface NavItemProps extends NavItem {
   icon: icons.LucideIcon,
   active?: boolean
 }
+
+export interface NavMenuItemProps {
+  children?: React.ReactNode,
+  label: string,
+  href: string,
+  active: boolean,
+  icon: icons.LucideIcon,
+
+}

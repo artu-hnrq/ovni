@@ -43,10 +43,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="
+            {/* <div className="
               sticky top-0 z-40 h-1.5 w-full
               bg-gradient-to-r from-lime-500 via-emerald-500 to-cyan-500
-            "/>
+            "/> */}
 
             <Sidebar />
 

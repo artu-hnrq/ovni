@@ -3,6 +3,7 @@ import Card from "./card"
 import Header from "./header"
 import Heading from "./heading"
 import Icons from "./icons"
+import NavMenu from "./nav-menu"
 import OccupancyProgressBar from "./occupancy-progress-bar"
 import Thumbnail from "./thumbnail"
 
@@ -12,6 +13,7 @@ export default {
     Header,
     Heading,
     Icons,
+    NavMenu,
     OccupancyProgressBar,
     Thumbnail,
 }

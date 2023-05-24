@@ -21,7 +21,7 @@ export default function OccupancyProgressBar({ className, tour }: OccupancyProgr
             )}>
                 <div className={cn(
                     "flex flex-col justify-center overflow-hidden rounded-l-full",
-                    "bg-lime-500 text-lime-700 text-xs text-center font-bold",
+                    "bg-lime-400 text-lime-600 text-xs text-[0.5rem] text-center font-bold",
                 )}
                     role="progressbar" style={{ width: `${pecentage}%` }}
                     aria-valuenow={pecentage} aria-valuemin="0" aria-valuemax="100"

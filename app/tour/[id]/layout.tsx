@@ -15,11 +15,11 @@ interface LayoutProps {
 export default async function TourLayout({ children, params }: LayoutProps) {
   let tour = await sdk.Tour.retrieve(params.id)
 
-  let attribute_badges = TourConfig.getAttributeBadges(tour) as AttributeBadgeProps[]
+  let attribute_badges = TourConfig.getAttributeBadgesProps(tour) as AttributeBadgeProps[]
 
   return (
-    <div className="flex-1 flex gap-6 w-full">
-      <div className="flex flex-col gap-4 w-1/3 h-full p-2 py-4">
+    <div className="flex-1 flex gap-6 w-full py-4">
+      <div className="flex flex-col gap-4 w-1/3 h-full">
 
         <Tour.Thumbnail tour={tour} className={cn(
           "rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]",
@@ -55,11 +55,15 @@ export default async function TourLayout({ children, params }: LayoutProps) {
         <Separator orientation="vertical" className="bg-slate-300 dark:bg-slate-600 w-[0.5px]" />
       </div>
 
-      <div className="flex flex-col w-full p-8">
+      <div className="flex flex-col gap-4 w-full">
+        <div className="flex w-fit">
+          <Tour.NavMenu tour={tour} />
+        </div>
         {children}
       </div>
-    </div >
+    </div>
   )
 }
+
 
 

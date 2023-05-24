@@ -17,7 +17,7 @@ export default function AttributeBadge({ icon, label, value }: AttributeBadgePro
       bg-gray-100 dark:bg-gray-800
     ">
             <p className="text-[0.5rem] font-semibold">{label}</p>
-            <Icon className="m-1 my-3" size={30} />
+            <Icon className="m-1 my-3 fill-lime-400 dark:fill-none" size={30} />
             <h3 className="text-xs font-semibold">
                 {value}
             </h3>
