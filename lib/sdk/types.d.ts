@@ -28,7 +28,13 @@ declare namespace Ovni {
         tour: RecordId,
     }
 
-    export interface Tour extends Table {
+    export interface Fillable {
+        capacity: number,
+        avaiability: number,
+        occupancy: number,
+    }
+
+    export interface Tour extends Fillable, Table {
         __table__: 'Tour',
 
         event: RecordId
@@ -44,9 +50,6 @@ declare namespace Ovni {
 
         trips: RecordId[],
         paths: RecordId[],
-        avaiability: number,
-        occupancy: number,
-        capacity: number,
 
         batches: RecordId[],
         revenue: number,
@@ -54,16 +57,12 @@ declare namespace Ovni {
 
     }
 
-    export interface Trip extends Table {
+    export interface Trip extends Fillable, Table {
         __table__: 'Trip',
 
         tour: RecordId,
         title: string,
         departure: string,
-
-        capacity: number,
-        avaiability: number,
-        occupancy: number,
 
         routes: RecordId[],
         origin: string,
@@ -181,6 +180,25 @@ declare namespace Ovni {
         receipt: image[],
         status: OrderStatus,
 
+    }
+
+    export interface Ticket extends Table {
+        __table__: 'Ticket',
+
+        id: number,
+        datetime: string,
+
+        order: RecordId[],
+        tour: RecordId[],
+        trip: RecordId[],
+        boarding: RecordId[],
+        passenger: RecordId[],
+
+        passenger_name: string,
+        passenger_phone: string,
+
+        whatsapp_url: string,
+        status: OrderStatus,
     }
 }
 

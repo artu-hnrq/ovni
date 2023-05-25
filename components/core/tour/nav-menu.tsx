@@ -34,7 +34,7 @@ export default function NavMenu({ children, tour }: NavMenuProps) {
 
     return (
         <NavigationMenu className="h-8 rounded bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 overflow-hidden">
-            <NavigationMenuList className="space-x-0">
+            <NavigationMenuList className="flex-col space-x-0">
                 {menu.map((props: NavMenuItemProps) => (
                     <NavMenuItem {...props} />
                 ))}
@@ -54,7 +54,7 @@ export function NavMenuItem({ children, label, href, active, icon }: NavMenuItem
                     "inline-flex items-center justify-center rounded-md text-xs font-semibold",
                     "bg-transparent hover:bg-gray-50 dark:hover:bg-gray-950 hover:text-accent-foreground transition-colors",
                     "data-[active]:bg-white dark:data-[active]:bg-black",
-                    "m-0"
+                    "w-full m-0"
                 )}
                     active={active}
                 >

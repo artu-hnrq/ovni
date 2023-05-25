@@ -12,7 +12,7 @@ export default {
 
     Batch: new AirtableSDK<Ovni.Batch>('Batch'),
     Order: new AirtableSDK<Ovni.Order>('Order'),
-    // Ticket: new AirtableSDK<Ovni.Ticket>('Ticket'),
+    Ticket: new AirtableSDK<Ovni.Ticket>('Ticket'),
     // User: new AirtableSDK<Ovni.User>('User'),
 }
 

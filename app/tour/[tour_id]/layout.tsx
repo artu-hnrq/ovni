@@ -8,13 +8,11 @@ import { Separator } from "@/components/ui/separator"
 
 interface LayoutProps {
   children: React.ReactNode
-  params: { id: string }
+  params: { tour_id: string }
 }
 
 export default async function TourLayout({ children, params }: LayoutProps) {
-  let tour = await sdk.Tour.retrieve(params.id)
-
-  let attribute_badges = TourConfig.getAttributeBadgesProps(tour)
+  let tour = await sdk.Tour.retrieve(params.tour_id)
 
   return (
 
@@ -28,27 +26,14 @@ export default async function TourLayout({ children, params }: LayoutProps) {
           "rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]",
         )} />
 
-        <div className="flex flex-col gap-6 px-2">
+        <div className="flex flex-col gap-10 px-2">
           <div><Tour.Heading tour={tour} /></div>
 
-          <div className="
-            flex flex-col gap-4
-            rounded p-4 h-fit
-          ">
-            <Tour.OccupancyProgressBar tour={tour} />
-
-            <div className="
-              flex flex-wrap justify-evenly items-center
-              rounded p-4
-            ">
-              {attribute_badges.map((props, index) => (
-                <Tour.AttributeBadge
-                  key={index}
-                  {...props}
-                />
-              ))}
-            </div>
+          <div className="flex flex-col items-end w-full">
+            <Tour.NavMenu tour={tour} />
           </div>
+
+
         </div>
       </div>
 
@@ -56,14 +41,9 @@ export default async function TourLayout({ children, params }: LayoutProps) {
         <Separator orientation="vertical" className="bg-slate-300 dark:bg-slate-600 w-[0.5px]" />
       </div>
 
-      <div className="flex flex-col gap-2 w-full">
-        <div className="flex w-fit">
-          <Tour.NavMenu tour={tour} />
-        </div>
 
-        <div className="flex-1">
-          {children}
-        </div>
+      <div className="flex flex-col gap-2 w-full">
+        {children}
       </div>
     </div >
   )

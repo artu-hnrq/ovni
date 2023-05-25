@@ -3,6 +3,7 @@ import {
   Compass,
   Github,
   LucideProps,
+  MapPin,
   Moon,
   Plus,
   SunMedium,
@@ -15,6 +16,7 @@ export type Icon = LucideIcon
 
 export const Icons = {
   Tour: Compass,
+  Waypoint: MapPin,
   Customer: User,
 
   Create: Plus,

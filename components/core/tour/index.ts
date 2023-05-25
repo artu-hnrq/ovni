@@ -4,7 +4,6 @@ import Header from "./header"
 import Heading from "./heading"
 import Icons from "./icons"
 import NavMenu from "./nav-menu"
-import OccupancyProgressBar from "./occupancy-progress-bar"
 import Thumbnail from "./thumbnail"
 
 export default {
@@ -14,6 +13,5 @@ export default {
     Heading,
     Icons,
     NavMenu,
-    OccupancyProgressBar,
     Thumbnail,
 }

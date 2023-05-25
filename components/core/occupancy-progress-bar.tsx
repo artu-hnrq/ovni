@@ -1,16 +1,14 @@
 import { Ovni } from "@/lib/sdk";
-import { cn, format_datetime } from "@/lib/utils";
-
-import { Progress } from "@/components/ui/progress"
+import { cn } from "@/lib/utils";
 
 
 export interface OccupancyProgressBarProps {
     className?: string
-    tour: Ovni.Tour
+    fillable: Ovni.Fillable
 }
 
-export default function OccupancyProgressBar({ className, tour }: OccupancyProgressBarProps) {
-    const pecentage = tour.occupancy * 100 / tour.capacity
+export default function OccupancyProgressBar({ className, fillable }: OccupancyProgressBarProps) {
+    const pecentage = fillable.occupancy * 100 / fillable.capacity
     return (
         <div className={className}>
             <div className={cn(
@@ -31,11 +29,11 @@ export default function OccupancyProgressBar({ className, tour }: OccupancyProgr
                 <p className="
                     absolute top-4 right-2
                     text-xs text-center font-bold text-gray-600 dark:text-gray-300
-                ">{tour.avaiability} vagas</p>
+                ">{fillable.avaiability} vagas</p>
                 <p className="
                     absolute top-4 left-2
                     text-xs text-center font-bold text-gray-600 dark:text-gray-300
-                ">{tour.occupancy} passagens</p>
+                ">{fillable.occupancy} passagens</p>
             </div >
         </div>
     )

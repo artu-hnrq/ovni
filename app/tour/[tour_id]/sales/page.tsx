@@ -1,21 +1,18 @@
 import sdk from "@/lib/sdk"
 import BatchList from "./batch-list"
 import OrderTable from "./order-table"
-import { Card } from "@/components/ui/card"
 
 
-export default async function TourSalesPage({ params }: { params: { id: string } }) {
-    console.log('params', params)
-
+export default async function TourSalesPage({ params }: { params: { tour_id: string } }) {
     const batches = await sdk.Batch.list({
-        formula: `tour_id='${params.id}'`,
+        formula: `tour_id='${params.tour_id}'`,
         sort: [
             { field: 'amount', direction: 'asc' },
         ]
     })
 
     let orders = await sdk.Order.list({
-        formula: `tour_id='${params.id}'`,
+        formula: `tour_id='${params.tour_id}'`,
         sort: [
             { field: 'id', direction: 'desc' }
         ]
