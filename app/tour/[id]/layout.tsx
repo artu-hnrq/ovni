@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils"
 import sdk from "@/lib/sdk"
 import Tour from "@/components/core/tour"
 import { TourConfig } from "@/config/tour"
-import { Card } from "@/components/ui/card"
 import GoBackButton from "@/components/core/go-back-button"
+import { Separator } from "@/components/ui/separator"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -50,7 +50,10 @@ export default async function TourLayout({ children, params }: LayoutProps) {
             </div>
           </div>
         </div>
+      </div>
 
+      <div className="flex flex-col justify-centers py-16 w-min">
+        <Separator orientation="vertical" className="bg-slate-300 dark:bg-slate-600 w-[0.5px]" />
       </div>
 
       <div className="flex flex-col gap-2 w-full">
@@ -58,9 +61,9 @@ export default async function TourLayout({ children, params }: LayoutProps) {
           <Tour.NavMenu tour={tour} />
         </div>
 
-        <Card className="flex-1 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 rounded">
+        <div className="flex-1">
           {children}
-        </Card>
+        </div>
       </div>
     </div >
   )
