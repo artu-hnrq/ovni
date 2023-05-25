@@ -22,13 +22,15 @@ import { cn } from "@/lib/utils"
 interface DataTableProps<TData, TValue> {
     className?: string
     columns: ColumnDef<TData, TValue>[]
-    data: TData[]
+    data: TData[],
+    headless?: boolean,
 }
 
 export function DataTable<TData, TValue>({
     className,
     columns,
     data,
+    headless = false,
 }: DataTableProps<TData, TValue>) {
     const table = useReactTable({
         data,
@@ -39,24 +41,26 @@ export function DataTable<TData, TValue>({
     return (
         <div className={cn("rounded-md border", className)}>
             <Table>
-                <TableHeader>
-                    {table.getHeaderGroups().map((headerGroup) => (
-                        <TableRow key={headerGroup.id}>
-                            {headerGroup.headers.map((header) => {
-                                return (
-                                    <TableHead key={header.id}>
-                                        {header.isPlaceholder
-                                            ? null
-                                            : flexRender(
-                                                header.column.columnDef.header,
-                                                header.getContext()
-                                            )}
-                                    </TableHead>
-                                )
-                            })}
-                        </TableRow>
-                    ))}
-                </TableHeader>
+                {!headless ? (
+                    <TableHeader>
+                        {table.getHeaderGroups().map((headerGroup) => (
+                            <TableRow key={headerGroup.id}>
+                                {headerGroup.headers.map((header) => {
+                                    return (
+                                        <TableHead key={header.id}>
+                                            {header.isPlaceholder
+                                                ? null
+                                                : flexRender(
+                                                    header.column.columnDef.header,
+                                                    header.getContext()
+                                                )}
+                                        </TableHead>
+                                    )
+                                })}
+                            </TableRow>
+                        ))}
+                    </TableHeader>
+                ) : null}
                 <TableBody>
                     {table.getRowModel().rows?.length ? (
                         table.getRowModel().rows.map((row) => (
