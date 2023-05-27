@@ -91,7 +91,7 @@ declare namespace Ovni {
         trip_departure: string,
 
         index: number,
-        type: string,
+        type: WaypointType,
         place: RecordId,
 
         title: string,

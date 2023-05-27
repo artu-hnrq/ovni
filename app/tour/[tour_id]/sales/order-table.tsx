@@ -1,14 +1,12 @@
 "use client"
 
-import { ColumnDef } from "@tanstack/react-table"
-import { DataTable } from "@/components/core/data-table"
+import DataTable, { ColumnDef } from "@/components/core/data-table"
 
 import EntityCollectionHeader from "@/components/core/entity-collection-header"
 import { Badge } from "@/components/ui/badge"
 
 import { Ovni } from "@/lib/sdk"
 import { cn, format_datetime } from "@/lib/utils"
-import { Card } from "@/components/ui/card"
 
 
 export const columns: ColumnDef<Ovni.Order>[] = [
@@ -61,7 +59,12 @@ export default function OrderTable({ orders }: { orders: Ovni.Order[] }) {
                 Pedidos
             </EntityCollectionHeader>
 
-            <DataTable columns={columns} data={orders} className="bg-white dark:bg-black" />
+            <DataTable<Ovni.Order>
+                options={{
+                    columns: columns,
+                    data: orders,
+                }}
+                className="bg-white dark:bg-black" />
         </div>
     )
 }

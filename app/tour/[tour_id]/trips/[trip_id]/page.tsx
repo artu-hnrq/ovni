@@ -1,11 +1,9 @@
 import OccupancyProgressBar from "@/components/core/occupancy-progress-bar"
 
-import RouteTimeline from "./route-timeline"
-import TicketTable, { TicketsPerWaypoint } from "./ticket-table"
-
 import { cn, format_datetime } from "@/lib/utils"
 import sdk, { Ovni } from "@/lib/sdk"
-import { Ticket } from "lucide-react"
+import Trip from "@/components/core/trip"
+
 
 
 export interface PageProps {
@@ -53,22 +51,13 @@ export default async function Page({ params }: PageProps) {
 
             <div className="flex-1">
                 {/* @ts-ignore */}
-                <Tickets trip={selected_trip} />
+                <BoardingList trip={selected_trip} />
             </div>
         </section >
     )
 }
 
-export async function Route({ trip }: { trip: Ovni.Trip }) {
-    let waypoints = await sdk.Waypoint.list({
-        formula: `trip_id='${trip.record_id}'`,
-        sort: [{ field: 'index', direction: 'asc' }]
-    })
-
-    return RouteTimeline({ waypoints })
-}
-
-async function Tickets({ trip }: { trip: Ovni.Trip }) {
+async function BoardingList({ trip }: { trip: Ovni.Trip }) {
     let tickets = await sdk.Ticket.list({
         formula: `trip='${trip.title}'`,
         sort: [
@@ -81,7 +70,16 @@ async function Tickets({ trip }: { trip: Ovni.Trip }) {
         sort: [{ field: 'index', direction: 'asc' }]
     })
 
+    let boarding_list = waypoints.map(waypoint => {
+        return {
+            ...waypoint,
+            tickets: tickets.filter(ticket => ticket.boarding[0] === waypoint.record_id)
+        }
+    })
+
     return (
-        <TicketsPerWaypoint tickets={tickets} waypoints={waypoints} />
+        <>
+            <Trip.BoardingListTable boarding_list={boarding_list} />
+        </>
     )
 }

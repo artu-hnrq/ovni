@@ -18,12 +18,22 @@ import {
 
 import { Icons } from "@/components/icons"
 
-import { Ovni } from "@/lib/sdk"
+import sdk, { Ovni } from "@/lib/sdk"
 import { cn, format_datetime } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 
-export default function RouteTimeline({
+export async function Route({ trip }: { trip: Ovni.Trip }) {
+    let waypoints = await sdk.Waypoint.list({
+        formula: `trip_id='${trip.record_id}'`,
+        sort: [{ field: 'index', direction: 'asc' }]
+    })
+
+    return RouteTimeline({ waypoints })
+}
+
+
+export function RouteTimeline({
     className,
     waypoints
 }: {
@@ -47,7 +57,7 @@ export default function RouteTimeline({
             <Table className="bg-white dark:bg-gray-900 rounded-lg">
                 <TableBody>
                     {waypoints.map((waypoint, index) => (
-                        <Waypoint key={index} waypoint={waypoint} className="first:border-t" />
+                        <RouteTimelineItem key={index} waypoint={waypoint} className="first:border-t" />
                     ))}
                 </TableBody>
             </Table>
@@ -56,7 +66,7 @@ export default function RouteTimeline({
 }
 
 
-export function Waypoint({
+export function RouteTimelineItem({
     className,
     waypoint,
 }: {
