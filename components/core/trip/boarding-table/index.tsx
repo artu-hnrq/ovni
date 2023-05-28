@@ -14,7 +14,6 @@ export function BoardingListTable({
     return (
         <>
             <DataTable<BoardingListData>
-                className="bg-white dark:bg-black"
                 headerless
                 options={{
                     columns: WaypointColumns,
@@ -31,7 +30,6 @@ export function BoardingListTable({
 export function TicketTable({ tickets }: { tickets: Ovni.Ticket[] }) {
     return (
         <DataTable<Ovni.Ticket>
-            className="bg-white dark:bg-black"
             options={{
                 columns: TicketColumns,
                 data: tickets,

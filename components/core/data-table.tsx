@@ -49,7 +49,7 @@ export default function DataTable<TData>({
     const columns_length = table.getAllColumns().length
 
     return (
-        <div className={cn("rounded-md border", className)}>
+        <div className={cn("rounded-md bg-white dark:bg-gray-950", className)}>
             <Table>
                 {!headless ? (
                     <TableHeader className="font-semibold">
@@ -57,7 +57,7 @@ export default function DataTable<TData>({
                             <TableRow key={headerGroup.id}>
                                 {headerGroup.headers.map((header) => {
                                     return (
-                                        <TableHead key={header.id} className="h-10 bg-gray-50">
+                                        <TableHead key={header.id} className="h-10">
                                             {header.isPlaceholder
                                                 ? null
                                                 : flexRender(
@@ -89,8 +89,7 @@ export default function DataTable<TData>({
                                     ))}
                                 </TableRow>
                                 {row.getIsExpanded() && renderSubComponent != undefined && (
-                                    <tr className="bg-slate-100 border-2">
-                                        {/* 2nd row is a custom 1 cell row */}
+                                    <tr className="bg-slate-100 dark:bg-slate-800 border-2">
                                         <TableCell
                                             className="p-2"
                                             colSpan={columns_length}

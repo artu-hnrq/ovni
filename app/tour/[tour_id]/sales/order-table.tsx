@@ -64,7 +64,7 @@ export default function OrderTable({ orders }: { orders: Ovni.Order[] }) {
                     columns: columns,
                     data: orders,
                 }}
-                className="bg-white dark:bg-black" />
+            />
         </div>
     )
 }
