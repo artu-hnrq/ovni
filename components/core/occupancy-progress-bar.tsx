@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 export interface OccupancyProgressBarProps {
     className?: string
-    fillable: Ovni.Fillable
+    fillable: Ovni.Tour | Ovni.Trip
 }
 
 export default function OccupancyProgressBar({ className, fillable }: OccupancyProgressBarProps) {

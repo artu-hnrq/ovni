@@ -1,12 +1,12 @@
 import OccupancyProgressBar from "@/components/core/occupancy-progress-bar"
 
-import { cn, format_datetime } from "@/lib/utils"
+import { cn } from "@/lib/utils"
 import sdk, { Ovni } from "@/lib/sdk"
 import Trip from "@/components/core/trip"
 
 
 
-export interface PageProps {
+export interface TripDetailsPageProps {
     params: {
         tour_id: string
         trip_id: string
@@ -14,17 +14,10 @@ export interface PageProps {
 }
 
 
-export default async function Page({ params }: PageProps) {
+export default async function TripDetailsPage({ params }: TripDetailsPageProps) {
     // let trip = await sdk.Trip.retrieve(params.trip_id)
 
-    let trips = await sdk.Trip.list({
-        formula: `tour_id='${params.tour_id}'`,
-        sort: [
-            { field: 'departure', direction: 'asc' }
-        ]
-    })
-
-    const selected_trip = trips.find(trip => trip.record_id === params.trip_id) || trips[0]
+    let trip = await sdk.Trip.retrieve(params.trip_id)
 
     return (
         <section className="flex flex-col gap-4">
@@ -34,24 +27,14 @@ export default async function Page({ params }: PageProps) {
                 "rounded-xl bg-white dark:bg-gray-900",
                 "sticky top-12",
             )} >
-                < h1 className={
-                    cn(
-                        "text-xl md:text-2xl lg:text-3xl",
-                        "font-extrabold leading-tight tracking-tighter",
-                        "flex-1",
-                    )}>
-                    {selected_trip.title}
-                    <time className="block text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                        {format_datetime(selected_trip.departure, "HH:mm")}
-                    </time>
-                </h1>
+                <Trip.Heading trip={trip} />
 
-                <OccupancyProgressBar fillable={selected_trip} className='w-60' />
+                <OccupancyProgressBar fillable={trip} className='w-60' />
             </div >
 
             <div className="flex-1">
                 {/* @ts-ignore */}
-                <BoardingList trip={selected_trip} />
+                <BoardingList trip={trip} />
             </div>
         </section >
     )

@@ -1,3 +1,6 @@
+
+import Heading from './heading'
+import LinkItem from './link-item'
 import {
     BoardingListTable,
     TicketTable,
@@ -9,6 +12,8 @@ import {
 } from './route-timeline'
 
 export default {
+    Heading,
+    LinkItem,
     BoardingListTable,
     TicketTable,
     Route,

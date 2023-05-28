@@ -1,6 +1,6 @@
 import moment from "moment"
 
-import { Card, CardDescription, CardSubtitle, CardTitle } from "@/components/ui/card"
+import { CardDescription, CardSubtitle, CardTitle } from "@/components/ui/card"
 
 import Thumbnail from "./thumbnail"
 import Heading from "./heading"
