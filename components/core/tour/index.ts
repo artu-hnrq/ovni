@@ -1,5 +1,5 @@
 import AttributeBadge from "./attribute-badge"
-import Card from "./card"
+import LinkItem from "./link-item"
 import Header from "./header"
 import Heading from "./heading"
 import Icons from "./icons"
@@ -8,7 +8,7 @@ import Thumbnail from "./thumbnail"
 
 export default {
     AttributeBadge,
-    Card,
+    LinkItem,
     Header,
     Heading,
     Icons,
