@@ -24,7 +24,7 @@ export default async function TripDetailsPage({ params }: TripDetailsPageProps) 
             <div className={cn(
                 "flex items-center gap-4",
                 "w-full h-fit mb-4 p-4 px-8",
-                "rounded-xl bg-white dark:bg-gray-900",
+                "rounded border border-element bg-element",
                 "sticky top-12",
             )} >
                 <Trip.Heading trip={trip} />

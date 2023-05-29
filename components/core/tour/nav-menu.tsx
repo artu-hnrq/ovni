@@ -33,7 +33,7 @@ export default function NavMenu({ children, tour }: NavMenuProps) {
     let menu: NavMenuItemProps[] = TourConfig.getNavMenuProps(tour)
 
     return (
-        <NavigationMenu className="h-8 rounded bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-600 overflow-hidden">
+        <NavigationMenu className="h-8 rounded bg-gray-100 bg-element border-element overflow-hidden">
             <NavigationMenuList className="flex-col space-x-0">
                 {menu.map((props: NavMenuItemProps) => (
                     <NavMenuItem {...props} />

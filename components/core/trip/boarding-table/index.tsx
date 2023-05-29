@@ -30,6 +30,7 @@ export function BoardingListTable({
 export function TicketTable({ tickets }: { tickets: Ovni.Ticket[] }) {
     return (
         <DataTable<Ovni.Ticket>
+            className="p-2 bg-transparent rounded-none border-none border-b"
             options={{
                 columns: TicketColumns,
                 data: tickets,

@@ -35,14 +35,15 @@ export default function BatchList({
                         className={cn(
                             "flex flex-row items-center justify-between",
                             "w-full p-2 px-3 overflow-hidden",
-                            "hover:bg-gray-100 dark:hover:bg-gray-900",
+                            "group",
+                            "border-element hover-element",
                         )}>
                         <CardHeader className="p-0">
                             <CardTitle className="text-sm">{batch.title}</CardTitle>
                             <CardSubtitle className="text-xs">{batch.description}</CardSubtitle>
                         </CardHeader>
                         <CardContent className="p-0">
-                            <div className="p-2 bg-gray-100 dark:bg-gray-900 rounded-md">
+                            <div className="p-2 bg-gray-100 dark:bg-gray-900 group-hover:bg-gray-200 dark:group-hover:bg-gray-800 rounded-md">
                                 <p className="text-xs">{batch.sold}</p>
                             </div>
                         </CardContent>

@@ -19,15 +19,16 @@ export const WaypointColumns: ColumnDef<BoardingListData>[] = [
         header: "Embarque",
         cell: ({ row }) => {
             return (
-                <div className="flex items-center gap-1 w-fit">
-                    {row.getCanExpand() ? (
-                        // If it's a grouped cell, add an expander and row count
-                        <>
-                            <button onClick={row.getToggleExpandedHandler()} className="flex items-center bg-transparent mr-4">
-                                {row.getIsExpanded() ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
-                            </button>
-                        </>
-                    ) : <div className="mr-7" >{" "}</div>}
+                <div className="flex items-center gap-3 w-fit">
+                    <button
+                        disabled={!row.getCanExpand()}
+                        onClick={row.getToggleExpandedHandler()}
+                        className={cn(
+                            "flex items-center bg-transparent mr-1",
+                            !row.getCanExpand() && "opacity-0 cursor-auto",
+                        )}>
+                        {row.getIsExpanded() ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
+                    </button>
                     <PinIcon className="" />
                     <h6 className="font-medium">
                         {row.getValue('title')}
@@ -93,7 +94,7 @@ export const TicketColumns: ColumnDef<Ovni.Ticket>[] = [
             let status = row.getValue('status') as Ovni.OrderStatus
 
             let status_color_map = {
-                'Aprovado': 'bg-green-100 dark:bg-green-900',
+                'Aprovado': 'bg-lime-100 dark:bg-lime-900',
                 'Pendente': 'yellow-100 dark:bg-yellow-900',
                 'Recusado': 'bg-red-100 dark:bg-red-900',
             }

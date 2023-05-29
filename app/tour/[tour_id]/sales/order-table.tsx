@@ -13,7 +13,11 @@ export const columns: ColumnDef<Ovni.Order>[] = [
     {
         accessorKey: "datetime",
         header: "Data",
-        cell: ({ row }) => format_datetime(row.getValue('datetime'))
+        cell: ({ row }) => (
+            <p className="text-xs">
+                {format_datetime(row.getValue('datetime'))}
+            </p>
+        )
     },
     {
         accessorKey: "buyer_name",
@@ -56,7 +60,7 @@ export default function OrderTable({ orders }: { orders: Ovni.Order[] }) {
     return (
         <div className={cn("flex flex-col gap-2 w-full")}>
             <EntityCollectionHeader>
-                Pedidos
+                Vendas
             </EntityCollectionHeader>
 
             <DataTable<Ovni.Order>
